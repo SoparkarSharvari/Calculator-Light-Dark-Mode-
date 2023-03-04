@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheetCal.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="javaScriptCal.js"></script>    
+    </head>
+    <body>
+    <div><h2 align=center style="font-style: italic;">Calculator</h2>
+        <div class="container" id="container" align="center">
+        
+            <div class="Display">
+
+                <form name="forms">
+
+                    <div class="eq"></div>
+                    <input id="textarea" name="textbox" type="text" size="30%">
+                    
+                </form>
+                <div id="toggle">
+                    <i class="indicator"></i>
+                </div>
+                <script>
+                    const body=document.querySelector("body")
+                    const container=document.getElementById("container")
+                    const textarae=document.getElementById("textarea")
+                    const toggle=document.getElementById("toggle");
+                    
+                    toggle.onclick = function()
+                 {      var buttoneq=document.getElementById("buttoneq")
+
+                        var button9=document.getElementById("button9")
+                        var button8=document.getElementById("button8")
+                        var button7=document.getElementById("button7")
+                        var button6=document.getElementById("button6")
+                        var button5=document.getElementById("button5")
+                        var button4=document.getElementById("button4")
+                        var button3=document.getElementById("button3")
+                        var button2=document.getElementById("button2")
+                        var button1=document.getElementById("button1")
+                        var button0=document.getElementById("button0")
+
+                            container.classList.toggle('active')
+                            toggle.classList.toggle('active')
+                            body.classList.toggle('active')
+                            textarae.classList.toggle('active')
+                            buttoneq.classList.toggle('active')
+                            button9.classList.toggle('active')
+                            button8.classList.toggle('active')
+                            button7.classList.toggle('active')
+                            button6.classList.toggle('active')
+                            button5.classList.toggle('active')
+                            button4.classList.toggle('active')
+                            button3.classList.toggle('active')
+                            button2.classList.toggle('active')
+                            button1.classList.toggle('active')
+                            button0.classList.toggle('active')
+                        }     
+                </script>
+            </div>
+            
+                <div class="keys" >  
+                
+                    <input type="button" name="button" in value="(" onclick="forms.textbox.value+='(' "> 
+                    <input type="button" name="button" value=")" onclick="forms.textbox.value+=')' "> 
+                    <input type="button" name="button" value="%" onclick="forms.textbox.value+='%' "> 
+                    <input type="button" name="button" value="AC" onclick="forms.textbox.value='' "> 
+                    <input type="button"  name="button" value="Del" onclick="myFunction1()"> 
+                    <br>
+                    
+                    <input type="button" name="button1"  id="button9"value="9" onclick="forms.textbox.value+='9' "> 
+                    <input type="button" name="button1" id="button8" value="8" onclick="forms.textbox.value+='8' "> 
+                    <input type="button" name="button1" id="button7" value="7" onclick="forms.textbox.value+='7' "> 
+                    <input type="button" name="button" value="/" onclick="forms.textbox.value+='/' "> 
+                    <input type="button"  name="button" value="Ans" onclick="myFunction2()"> 
+                    <br>
+
+                    <input type="button" name="button1" id="button4" value="4" onclick="forms.textbox.value+='4' "> 
+                    <input type="button" name="button1" id="button5" value="5" onclick="forms.textbox.value+='5' " > 
+                    <input type="button" name="button1" id="button6" value="6" onclick="forms.textbox.value+='6' "> 
+                    <input type="button" name="button" value="x" onclick="forms.textbox.value+='*' "> 
+                    <input type="button"  name="button" value="log" onclick="myFunction3()"> 
+                    <br>
+
+                    <input type="button" name="button1"id="button1" value="1" onclick="forms.textbox.value+='1' "> 
+                    <input type="button" name="button1" id="button2" value="2" onclick="forms.textbox.value+='2' "> 
+                    <input type="button" name="button1" id="button3" value="3" onclick="forms.textbox.value+='3' "> 
+                    <input type="button" name="button" value="-" onclick="forms.textbox.value+='-' "> 
+                    <input type="button"  name="button" value="ln" onclick="myFunction4()"> 
+                    
+                    <br>
+                    <input type="button" name="button1" id="button0" value="0" onclick="forms.textbox.value+='0' "> 
+                    <input type="button" name="button" value="." onclick="forms.textbox.value+='.' "> 
+                    <input type="button" name="button" value="√" onclick="myFunction5()"> 
+                    <input type="button" name="button" value="+" onclick="forms.textbox.value+='+' " > 
+                    
+                    <input type="button" name="button2" id="buttoneq" value="=" onclick=" myFunction()"> <br>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
